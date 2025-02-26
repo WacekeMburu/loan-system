@@ -31,11 +31,13 @@
                 <td>{{ customer.phone }}</td>
                 <td>
                     <button class="btn btn-sm btn-warning" (click)="editCustomer(customer)">Edit</button>
-                    <button class="btn btn-sm btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteCustomer()">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+
+  
 
    <!-- <nav>
     <a routerLink="/customers/c-clients">Create</a>

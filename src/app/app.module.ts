@@ -12,7 +12,7 @@ import { RClientsComponent } from './customers/r-clients/r-clients.component';
 import { UClientsComponent } from './customers/u-clients/u-clients.component';
 import { DClientsComponent } from './customers/d-clients/d-clients.component';
 import { FormsModule } from '@angular/forms';
-
+import { Router, RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule,
     
 
     
