@@ -6,24 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent {
-customers: any;
-editCustomer(_t23: any) {
-throw new Error('Method not implemented.');
-}
-openEditForm() {
-throw new Error('Method not implemented.');
-}
-deleteCustomer() {
-throw new Error('Method not implemented.');
-}
-openCreateForm() {
-throw new Error('Method not implemented.');
-}
-loadCustomers() {
-throw new Error('Method not implemented.');
-}
+  selectedOperation: string = '';
 
+  selectOperation(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    this.selectedOperation = target.value;
+  }
 }
-
-
-

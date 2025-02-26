@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ClientService } from 'src/app/services/clients.service';
+import { CustomersService } from 'src/app/services/customers.service';
 
 @Component({
   selector: 'app-d-clients',
   templateUrl: './d-clients.component.html',
   styleUrls: ['./d-clients.component.css']
 })
-export class DClientsComponent {
-  clientId!: number;
+export class DClientsComponent implements OnInit{
+  id!: number;
 
-  constructor(
-    private clientService: ClientService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
-    this.clientId = Number(this.route.snapshot.paramMap.get('id'));
+  constructor(private route: ActivatedRoute, private customersService: CustomersService, private router: Router) {}
+
+  ngOnInit() {
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
   }
 
-  delete() {
-    this.clientService.deleteClient(this.clientId);
-    this.router.navigate(['/customers']);
+  deleteCustomer() {
+    this.customersService.deleteCustomer(this.id);
+    alert('Customer deleted successfully');
+    this.router.navigate(['/read']);
   }
+
+
 
 }

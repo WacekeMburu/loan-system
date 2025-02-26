@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Client, ClientService } from 'src/app/services/clients.service';
-
+import { CustomersService } from 'src/app/services/customers.service';
 
 @Component({
   selector: 'app-r-clients',
@@ -8,21 +7,20 @@ import { Client, ClientService } from 'src/app/services/clients.service';
   styleUrls: ['./r-clients.component.css']
 })
 export class RClientsComponent implements OnInit{
-  clients: Client[] = [];
+  customersName: string= '';
+customers: any;
 
-  constructor(private clientService: ClientService) {}
-
-  ngOnInit() {
-    this.clients = this.clientService.getClients();
+  constructor(private customersService: CustomersService) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
-  edit(id: number) {
-    // Navigate to edit page
-  }
+createCustomer(): void {
+  console.log('Customer Created:', this.customersName);
+}
 
-  delete(id: number) {
-    this.clientService.deleteClient(id);
-    this.clients = this.clientService.getClients();
-  }
+  
 
 }
+
+

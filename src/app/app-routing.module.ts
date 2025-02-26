@@ -3,12 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CustomersComponent } from './customers/customers.component';
 import { CClientsComponent } from './customer/c-clients/c-clients.component';
 import { DClientsComponent } from './customers/d-clients/d-clients.component';
 import { UClientsComponent } from './customers/u-clients/u-clients.component';
 import { RClientsComponent } from './customers/r-clients/r-clients.component';
-import { CustomersComponent } from './customers/customers.component';
-
 
 const routes: Routes = [
 {path: '', redirectTo: 'login', pathMatch: 'full'},

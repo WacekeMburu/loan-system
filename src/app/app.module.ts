@@ -11,8 +11,9 @@ import { CClientsComponent } from './customer/c-clients/c-clients.component';
 import { RClientsComponent } from './customers/r-clients/r-clients.component';
 import { UClientsComponent } from './customers/u-clients/u-clients.component';
 import { DClientsComponent } from './customers/d-clients/d-clients.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -30,11 +31,10 @@ import { Router, RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
     RouterModule,
-    
-
-    
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
