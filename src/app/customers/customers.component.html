@@ -1,0 +1,47 @@
+<div class="customer-container">
+    <h2>Manage Customer</h2>
+
+     <!-- CRUD Dropdown Menu -->
+     <div class="dropdown mb-3">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Customer Actions
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="openCreateForm()">Create Customer</a></li>
+            <li><a class="dropdown-item" (click)="loadCustomers()">View All Customers</a></li>
+            <li><a class="dropdown-item" (click)="openEditForm()">Edit Customer</a></li>
+            <li><a class="dropdown-item" (click)="deleteCustomer()">Delete Customer</a></li>
+        </ul>
+    </div>
+
+    <!-- Customers Table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" (click)="editCustomer(customer)">Edit</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   <!-- <nav>
+    <a routerLink="/customers/c-clients">Create</a>
+    <a routerLink="/customers/r-clients">Read</a>
+    <a routerLink="/customers/u-clients">Update</a>
+    <a routerLink="/customers/d-clients">Delete</a>
+   </nav>
+   <router-outlet></router-outlet> -->
+</div>

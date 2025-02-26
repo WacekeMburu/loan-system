@@ -1,0 +1,60 @@
+<div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidenav-container">
+      <div class="sidenav">
+        <div class="sidebar">
+          <h2 class="logo">loan System</h2>
+          <ul>
+            <li><a routerLink="/dashboard"><span class="icon">📊</span>Dashboard</a></li>
+
+
+            <li>
+              <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#customersMenu">
+                <span class="icon">👥</span> Customers
+              </a>
+
+              <ul id="customersMenu" class="collapse list-unstyled">
+                <li><a routerLink="/dashboard/customer">Manage Customers</a></li>
+            </ul>
+
+            </li>
+
+            <li><a routerLink="/dashboard/loans"><span class="icon">💳</span> Loans</a></li>
+
+
+
+
+            <!-- <li><a href="#"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#"><span class="icon">👥</span> Customers</a></li>
+            <li><a href="#"><span class="icon">💳</span> Loans</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Dashboard Content -->
+    <div class="dashboard">
+      <h2>Welcome, <strong>Waceke</strong></h2>
+      <!-- <p>Your last login was from <strong>London, UK</strong> on 1st February 2023.</p> -->
+  
+      <!-- <div class="stats">
+        <div class="stat-box">102 <span>Pending applications</span></div>
+        <div class="stat-box">83 <span>Unresolved tasks</span></div>
+        <div class="stat-box">68 <span>Unread e-mails</span></div>
+        <div class="stat-box">71 <span>Pending payments</span></div>
+      </div>
+   -->
+      <div class="charts">
+        <div class="chart-container">
+          <h3>Income per day</h3>
+          <div class="chart-placeholder">[Line Chart Placeholder]</div>
+        </div>
+        <div class="chart-container">
+          <h3>New applications</h3>
+          <div class="chart-placeholder">[Bar Chart Placeholder]</div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  

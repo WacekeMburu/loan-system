@@ -1,0 +1,6 @@
+<h2>Edit Client</h2>
+    <form *ngIf="client" (ngSubmit)="save()">
+      <input [(ngModel)]="client.name" placeholder="Name" required />
+      <input [(ngModel)]="client.email" placeholder="Email" required />
+      <button type="submit">Update</button>
+    </form>
